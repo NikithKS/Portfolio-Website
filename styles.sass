@@ -27,6 +27,7 @@ body
     .name
         font-size: 45px
         padding-bottom: 10px 
+        word-spacing: 7px
 
     .first-letter
         font-size: 50px
@@ -44,6 +45,34 @@ body
     height: 20px
     width: 100%
     background-color: grey
+
+
+.about-box
+    width: 100%
+    height: 800px
+    // max-height: 800px
+    background-color: light-yellow
+    display: flex
+    align-content: center
+    justify-content: center
+
+    .about-border
+        background-color: yellow
+        width: 100%
+        max-width: 800px
+        height: 100%
+        margin-left: 30px
+        position: relative
+
+        .about-titl
+            font-family: Arial, Helvetica, sans-serif
+            font-size: 33px
+            letter-spacing: 3px
+            position: absolute
+            top: 10%
+            left: -5%
+            
+    
 
 
 @media screen and ( max-width: 720px)
@@ -68,3 +97,9 @@ body
             max-width: 100%
     .floor
         display: none
+
+    .about-border
+        .about-titl
+            top: 5%
+            left: -30px
+
