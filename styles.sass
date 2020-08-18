@@ -1,0 +1,70 @@
+// styles.sass
+body
+    margin: 0
+    
+.head
+    background-color: black
+    position: relative
+    padding-bottom: 50px
+    overflow: visible
+    border: 0px solid
+    border-color: black black grey black
+
+.name
+    // transform: perspective(1000px) rotateX(-7deg) rotateY(7deg) rotateZ(0deg)
+
+
+.head-text
+    color: #fff7ed
+    padding-left: 60px
+    max-width: 50%
+    padding-top: 100px
+    
+    .name, h2
+        padding: 5px 0px
+        margin: 0
+
+    .name
+        font-size: 45px
+        padding-bottom: 10px 
+
+    .first-letter
+        font-size: 50px
+        color: #5f6cd1
+
+#head-img
+    max-width: 50%
+    height: auto
+    position: absolute
+    bottom: -4%
+    right: 0
+    // z-index: 0
+
+.floor
+    height: 20px
+    width: 100%
+    background-color: grey
+
+
+@media screen and ( max-width: 720px)
+    .head
+        margin-left: 0
+        margin-top: 0
+
+        h1
+            font-size: xx-large
+            padding: 0
+            padding-bottom: 5px 
+
+        #head-img 
+            display: none
+        
+        .head-text
+            padding-left: 30px
+            padding-top: 50px 
+            max-width: 70%
+        
+        .name
+            max-width: 100%
+    .floor
+        display: none
