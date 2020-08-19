@@ -39,26 +39,68 @@ body {
 
 .about-box {
   width: 100%;
-  height: 800px;
-  background-color: light-yellow;
+  height: 400px;
+  max-height: 800px;
+  color: white;
+  background-color: #000;
   display: flex;
   align-content: center;
   justify-content: center; }
   .about-box .about-border {
-    background-color: yellow;
+    background-color: #000;
     width: 100%;
     max-width: 800px;
     height: 100%;
+    margin: 10px;
     margin-left: 30px;
     position: relative; }
     .about-box .about-border .about-titl {
+      background-color: #000;
       font-family: Arial, Helvetica, sans-serif;
       font-size: 33px;
       letter-spacing: 3px;
       position: absolute;
       top: 10%;
-      left: -5%; }
+      left: 30%;
+      border: solid #5f6cd1;
+      border-width: 0px;
+      padding: 3px; }
+    .about-box .about-border::after, .about-box .about-border::before {
+      border: 3px solid transparent;
+      content: "";
+      height: 0px;
+      width: 0px;
+      position: absolute; }
+    .about-box .about-border::before {
+      top: -3px;
+      left: -3px; }
+    .about-box .about-border::after {
+      bottom: -3px;
+      right: -3px; }
+  .about-box:hover .about-border::before {
+    border-top-color: #5f6cd1;
+    border-left-color: #5f6cd1;
+    animation: grow-border 1s linear forwards; }
+  .about-box:hover .about-border::after {
+    border-bottom-color: #5f6cd1;
+    border-right-color: #5f6cd1;
+    animation: grow-border 0.7s linear forwards; }
+  .about-box:hover .about-titl {
+    animation: move-titl-left 0.5s forwards; }
 
+@keyframes grow-border {
+  0% {
+    width: 0%;
+    height: 0%; }
+  100% {
+    width: 100%;
+    height: 100%; } }
+@keyframes move-titl-left {
+  0% {
+    border-width: 0px; }
+  100% {
+    left: -10%;
+    border-width: 3px; } }
 @media screen and (max-width: 720px) {
   .head {
     margin-left: 0;
@@ -77,10 +119,11 @@ body {
       max-width: 100%; }
 
   .floor {
-    display: none; }
+    height: 3px; }
 
   .about-border .about-titl {
     top: 5%;
-    left: -30px; } }
+    left: 10%;
+    letter-spacing: 1px; } }
 
 /*# sourceMappingURL=styles.css.map */
