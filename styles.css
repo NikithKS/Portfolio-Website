@@ -7,7 +7,8 @@ body {
   padding-bottom: 50px;
   overflow: visible;
   border: 0px solid;
-  border-color: black black grey black; }
+  border-color: black black grey black;
+  perspective: 1000px; }
 
 .head-text {
   color: #fff7ed;
@@ -25,6 +26,36 @@ body {
     font-size: 50px;
     color: #4f63fc; }
 
+.contact-but {
+  border: solid 3px #4f63fc;
+  padding: 5px 15px;
+  color: white;
+  position: absolute;
+  top: 2%;
+  right: 1%; }
+
+.contact-div {
+  display: none;
+  height: 65%;
+  padding: 20px;
+  background-color: slategrey;
+  color: white;
+  justify-content: center;
+  position: absolute;
+  right: 0%;
+  top: 20%;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  transform-origin: center right;
+  transform: rotateY(5deg); }
+  .contact-div a {
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-size: 35px;
+    margin: 30px 0px; }
+
 #head-img {
   max-width: 50%;
   height: auto;
@@ -39,11 +70,9 @@ body {
 
 .about-box {
   width: 100%;
-  max-height: 800px;
   color: white;
   background-color: #000;
   display: flex;
-  align-content: center;
   justify-content: center; }
   .about-box .about-border {
     background-color: #000;
@@ -51,9 +80,9 @@ body {
     max-width: 700px;
     height: 100%;
     margin: 10px;
-    margin-left: 30px;
+    margin-left: 40px;
     position: relative; }
-    .about-box .about-border .about-titl {
+    .about-box .about-border .about-titl, .about-box .about-border about-titl::after {
       background-color: #000;
       font-family: Arial, Helvetica, sans-serif;
       font-size: 33px;
@@ -64,15 +93,14 @@ body {
       border: solid #4f63fc;
       border-width: 0px;
       padding: 3px; }
-    .about-box .about-border .abt-content {
+    .about-box .about-border .about-content {
       font-size: 22px;
       font-family: Arial, Helvetica, sans-serif;
-      width: 60%;
+      width: 65%;
       float: right;
-      padding-top: 100px;
-      padding-right: 30px;
+      margin-top: 15%;
+      padding-right: 40px;
       padding-bottom: 40px;
-      word-spacing: 7px;
       letter-spacing: 2px;
       text-align: justify;
       opacity: 0; }
@@ -91,15 +119,17 @@ body {
   .about-box:hover .about-border::before {
     border-top-color: #4f63fc;
     border-left-color: #4f63fc;
-    animation: grow-border 1s linear forwards; }
+    animation: grow-border 0.7s linear forwards; }
   .about-box:hover .about-border::after {
     border-bottom-color: #4f63fc;
     border-right-color: #4f63fc;
     animation: grow-border 0.7s linear forwards; }
   .about-box:hover .about-titl {
-    animation: move-titl-left 0.5s forwards; }
+    animation: move-titl-left 0.5s linear forwards; }
+    .about-box:hover .about-titl::after {
+      content: ":"; }
   .about-box:hover .about-content {
-    animation: fade-in 0.7s linear forwards; }
+    animation: fade-in 0.8s linear forwards; }
 
 @keyframes grow-border {
   0% {
@@ -139,9 +169,16 @@ body {
   .floor {
     height: 3px; }
 
-  .about-border .about-titl {
+  .about-titl {
     top: 5%;
     left: 10%;
-    letter-spacing: 1px; } }
+    font-size: 5px;
+    letter-spacing: 1px; }
+
+  .about-content {
+    margin: 5px; }
+
+  .contact-but {
+    border-width: 1px; } }
 
 /*# sourceMappingURL=styles.css.map */
