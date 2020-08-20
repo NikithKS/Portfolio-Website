@@ -23,7 +23,7 @@ body {
     word-spacing: 7px; }
   .head-text .first-letter {
     font-size: 50px;
-    color: #5f6cd1; }
+    color: #4f63fc; }
 
 #head-img {
   max-width: 50%;
@@ -39,7 +39,6 @@ body {
 
 .about-box {
   width: 100%;
-  height: 400px;
   max-height: 800px;
   color: white;
   background-color: #000;
@@ -49,7 +48,7 @@ body {
   .about-box .about-border {
     background-color: #000;
     width: 100%;
-    max-width: 800px;
+    max-width: 700px;
     height: 100%;
     margin: 10px;
     margin-left: 30px;
@@ -62,9 +61,21 @@ body {
       position: absolute;
       top: 10%;
       left: 30%;
-      border: solid #5f6cd1;
+      border: solid #4f63fc;
       border-width: 0px;
       padding: 3px; }
+    .about-box .about-border .abt-content {
+      font-size: 22px;
+      font-family: Arial, Helvetica, sans-serif;
+      width: 60%;
+      float: right;
+      padding-top: 100px;
+      padding-right: 30px;
+      padding-bottom: 40px;
+      word-spacing: 7px;
+      letter-spacing: 2px;
+      text-align: justify;
+      opacity: 0; }
     .about-box .about-border::after, .about-box .about-border::before {
       border: 3px solid transparent;
       content: "";
@@ -78,15 +89,17 @@ body {
       bottom: -3px;
       right: -3px; }
   .about-box:hover .about-border::before {
-    border-top-color: #5f6cd1;
-    border-left-color: #5f6cd1;
+    border-top-color: #4f63fc;
+    border-left-color: #4f63fc;
     animation: grow-border 1s linear forwards; }
   .about-box:hover .about-border::after {
-    border-bottom-color: #5f6cd1;
-    border-right-color: #5f6cd1;
+    border-bottom-color: #4f63fc;
+    border-right-color: #4f63fc;
     animation: grow-border 0.7s linear forwards; }
   .about-box:hover .about-titl {
     animation: move-titl-left 0.5s forwards; }
+  .about-box:hover .about-content {
+    animation: fade-in 0.7s linear forwards; }
 
 @keyframes grow-border {
   0% {
@@ -101,6 +114,11 @@ body {
   100% {
     left: -10%;
     border-width: 3px; } }
+@keyframes fade-in {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
 @media screen and (max-width: 720px) {
   .head {
     margin-left: 0;
