@@ -26,35 +26,43 @@ body {
     font-size: 50px;
     color: #4f63fc; }
 
-.contact-but {
-  border: solid 3px #4f63fc;
-  padding: 5px 15px;
+.contact-list {
   color: white;
   position: absolute;
   top: 2%;
-  right: 1%; }
-
-.contact-div {
-  display: none;
-  height: 65%;
-  padding: 20px;
-  background-color: slategrey;
-  color: white;
+  right: 1%;
+  display: flex;
   justify-content: center;
-  position: absolute;
-  right: 0%;
-  top: 20%;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  transform-origin: center right;
-  transform: rotateY(5deg); }
-  .contact-div a {
-    text-decoration: none;
-    font-family: Arial, Helvetica, sans-serif;
+  align-items: center;
+  font-size: large;
+  font-family: Arial, Helvetica, sans-serif;
+  flex-flow: column;
+  list-style-type: none; }
+  .contact-list:hover .contact-items li:nth-child(1) {
+    display: flex;
+    opacity: 0;
+    animation: show-contacts 0.3s forwards;
+    animation-delay: 0s; }
+  .contact-list:hover .contact-items li:nth-child(2) {
+    display: flex;
+    opacity: 0;
+    animation: show-contacts 0.3s forwards;
+    animation-delay: 0.3s; }
+  .contact-list .contact-items li, .contact-list .contact-button {
+    padding: 5px 30px;
+    border: solid 3px #4f63fc;
     color: white;
-    font-size: 35px;
-    margin: 30px 0px; }
+    background-color: #000; }
+    .contact-list .contact-items li:hover, .contact-list .contact-button:hover {
+      border-color: white; }
+  .contact-list .contact-button {
+    z-index: 2; }
+  .contact-list .contact-items li {
+    border-top: none;
+    display: none; }
+  .contact-list .contact-items li a {
+    color: white;
+    text-decoration: none; }
 
 #head-img {
   max-width: 50%;
@@ -99,7 +107,11 @@ body {
       margin-right: 40px;
       margin-bottom: 40px;
       letter-spacing: 2px;
-      opacity: 0; }
+      opacity: 0;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none; }
     .about-box .about-border::after, .about-box .about-border::before {
       border: 3px solid transparent;
       content: "";
@@ -127,6 +139,16 @@ body {
   .about-box:hover .about-content, .about-box:active .about-content {
     animation: fade-in 0.8s linear forwards; }
 
+@keyframes show-contacts {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%); }
+  30% {
+    opacity: 1;
+    transform: translateY(-90%); }
+  100% {
+    opacity: 1;
+    transform: translateY(0%); } }
 @keyframes grow-border {
   0% {
     width: 0%;
@@ -177,10 +199,7 @@ body {
     letter-spacing: 0px; }
   .about-border .about-titl {
     top: 20px;
-    left: 10px; }
-
-  .contact-but {
-    border-width: 1px; } }
+    left: 10px; } }
 @media (max-width: 500px) {
   .about-box .about-border {
     margin-left: 30px; }
@@ -191,8 +210,6 @@ body {
       width: 90%;
       margin: 74px 15px 35px;
       font-size: larger;
-      letter-spacing: 0px; }
-  .about-box .contact-but {
-    border-width: 1px; } }
+      letter-spacing: 0px; } }
 
 /*# sourceMappingURL=styles.css.map */

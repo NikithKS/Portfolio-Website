@@ -40,39 +40,50 @@ body
         font-size: 50px
         color: $theme
 
-.contact-but
-    border: solid 3px $theme
-    padding: 5px 15px
+
+.contact-list
     color: $uni-font-color
     position: absolute
     top: 2%
     right: 1%
-
-.contact-div
-    display: none
-    // display: flex
-    height: 65%
-    padding: 20px
-    background-color: slategrey
-    color: $uni-font-color
+    display: flex
     justify-content: center
-    position: absolute
-    right: 0%
-    top: 20%
-    flex-direction: column
-    flex-wrap: wrap
-    // flex-flow: column wrap
-    justify-content: space-evenly
-    transform-origin: center right
-    transform: rotateY(5deg)
+    align-items: center
+    font-size: large
+    font-family: $uni-font
+    flex-flow: column
+    list-style-type: none
+    
+    &:hover
+        .contact-items li
+            @for $i from 1 through 2
+                &:nth-child(#{$i})
+                    display: flex
+                    opacity: 0
+                    animation: show-contacts 0.3s forwards
+                    animation-delay: (0.3s * $i) - 0.3  
 
-    a
-        // background-color: yellow
+    .contact-items li, .contact-button
+        padding: 5px 30px 
+        border: solid 3px $theme
+        color: white
+        background-color: $uni-bg
+        // border: solid 3px #040c44
+        &:hover
+            border-color: white
+    
+    .contact-button
+        z-index: 2
+
+    .contact-items li
+        border-top: none
+        display: none
+
+
+    .contact-items li a
+        color: white
         text-decoration: none
-        font-family: $uni-font
-        color: $uni-font-color
-        font-size: 35px
-        margin: 30px 0px
+
 #head-img
     max-width: 50%
     height: auto
@@ -127,6 +138,12 @@ body
             // text-align: justify
             opacity: 0
             // animation: fade-in 0.7s linear forwards 
+            -webkit-user-select: none     
+            -moz-user-select: none
+            -ms-user-select: none
+            user-select: none
+
+
             
         &::after, &::before
             border: 3px solid transparent
@@ -162,6 +179,18 @@ body
 
         .about-content
             animation: fade-in 0.8s linear forwards 
+
+@keyframes show-contacts
+    0%
+        opacity: 0
+        transform: translateY(-100%)
+    30%
+        opacity: 1
+        transform: translateY(-90%)
+    100%
+        opacity: 1
+        transform: translateY(0%)
+        
 
 
 @keyframes grow-border
@@ -222,6 +251,7 @@ body
             .about-content
                 letter-spacing: 1px
 
+
 @media (min-width: 501px) and (max-width: 760px)
     .about-border
         .about-content
@@ -229,8 +259,6 @@ body
         .about-titl
             top: 20px
             left: 10px
-    .contact-but
-        border-width: 1px
 
 @media (max-width: 500px)
     .about-box
@@ -248,6 +276,3 @@ body
                 font-size: larger
                 // padding-top: 69px
                 letter-spacing: 0px
-
-        .contact-but
-            border-width: 1px
