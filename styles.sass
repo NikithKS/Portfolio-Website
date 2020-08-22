@@ -4,6 +4,8 @@ $uni-bg: #000
 // $uni-bg: #000
 $uni-font-color: white
 $uni-font: Arial, Helvetica, sans-serif
+$contact-count: 2
+$body-wid: 700px
 
 body
     margin: 0
@@ -56,27 +58,35 @@ body
     
     &:hover
         .contact-items li
-            @for $i from 1 through 2
+            @for $i from 1 through $contact-count
                 &:nth-child(#{$i})
                     display: flex
                     opacity: 0
-                    animation: show-contacts 0.3s forwards
+                    z-index: $contact-count - $i + 1
+                    animation-name: show-contacts 
+                    animation-timing-function: linear 
+                    animation-fill-mode: forwards
+                    animation-duration: 0.3s
                     animation-delay: (0.3s * $i) - 0.3  
 
     .contact-items li, .contact-button
         padding: 5px 30px 
+        display: flex
+        justify-content: center
         border: solid 3px $theme
         color: white
         background-color: $uni-bg
         // border: solid 3px #040c44
+        -webkit-user-select: none     
+        -moz-user-select: none
+        -ms-user-select: none
+        user-select: none
+        z-index: 100
         &:hover
             border-color: white
-    
-    .contact-button
-        z-index: 2
 
     .contact-items li
-        border-top: none
+        border-top-color: transparent
         display: none
 
 
@@ -104,12 +114,13 @@ body
     background-color: $uni-bg
     display: flex
     justify-content: center
+    // box-shadow: 2px 5px yellow
     // align-items: center
     // overflow: hidden
 
     .about-border
         background-color: $uni-bg
-        max-width: 700px
+        max-width: $body-wid
         margin: 10px 10px 10px 40px
         position: relative
 
@@ -129,7 +140,7 @@ body
             font-size: 22px
             font-family: $uni-font
             width: 65%
-            float: right 
+            float: right
             margin-top: 120px
             margin-right: 40px
             margin-bottom: 40px
@@ -160,7 +171,7 @@ body
             bottom: -3px
             right: -3px
 
-    &:hover , &:active
+    &:hover, &:active
         .about-border::before
             border-top-color: $theme
             border-left-color: $theme
@@ -179,6 +190,33 @@ body
 
         .about-content
             animation: fade-in 0.8s linear forwards 
+
+.project-div
+    background-color: $uni-bg
+    color: $theme
+    display: flex
+    // flex-direction: column
+    justify-content: center
+    // justify-self: center
+
+.project-head
+    display: inline
+    padding: 5px 10px
+    border: 3px solid $theme
+    color: $uni-font-color
+    margin-right: auto
+    margin-left: auto
+
+.project-body
+    max-width: $body-wid
+    // display: block
+    margin: 0px
+
+.project-title
+    color: $theme
+
+.project-desc
+    color: $uni-font-color
 
 @keyframes show-contacts
     0%

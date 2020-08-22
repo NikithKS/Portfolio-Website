@@ -41,24 +41,37 @@ body {
   .contact-list:hover .contact-items li:nth-child(1) {
     display: flex;
     opacity: 0;
-    animation: show-contacts 0.3s forwards;
+    z-index: 2;
+    animation-name: show-contacts;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    animation-duration: 0.3s;
     animation-delay: 0s; }
   .contact-list:hover .contact-items li:nth-child(2) {
     display: flex;
     opacity: 0;
-    animation: show-contacts 0.3s forwards;
+    z-index: 1;
+    animation-name: show-contacts;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    animation-duration: 0.3s;
     animation-delay: 0.3s; }
   .contact-list .contact-items li, .contact-list .contact-button {
     padding: 5px 30px;
+    display: flex;
+    justify-content: center;
     border: solid 3px #4f63fc;
     color: white;
-    background-color: #000; }
+    background-color: #000;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    z-index: 100; }
     .contact-list .contact-items li:hover, .contact-list .contact-button:hover {
       border-color: white; }
-  .contact-list .contact-button {
-    z-index: 2; }
   .contact-list .contact-items li {
-    border-top: none;
+    border-top-color: transparent;
     display: none; }
   .contact-list .contact-items li a {
     color: white;
@@ -138,6 +151,30 @@ body {
       content: ":"; }
   .about-box:hover .about-content, .about-box:active .about-content {
     animation: fade-in 0.8s linear forwards; }
+
+.project-div {
+  background-color: #000;
+  color: #4f63fc;
+  display: flex;
+  justify-content: center; }
+
+.project-head {
+  display: inline;
+  padding: 5px 10px;
+  border: 3px solid #4f63fc;
+  color: white;
+  margin-right: auto;
+  margin-left: auto; }
+
+.project-body {
+  max-width: 700px;
+  margin: 0px; }
+
+.project-title {
+  color: #4f63fc; }
+
+.project-desc {
+  color: white; }
 
 @keyframes show-contacts {
   0% {
