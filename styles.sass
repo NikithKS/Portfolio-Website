@@ -9,6 +9,7 @@ $body-wid: 700px
 
 body
     margin: 0
+    background-color: $uni-bg
     
 .head
     background-color: black
@@ -194,10 +195,14 @@ body
 .project-div
     background-color: $uni-bg
     color: $theme
+    margin-top: 25px
+    width: 100%
     display: flex
-    // flex-direction: column
-    justify-content: center
+    flex-direction: column
+    // justify-content: center
+    // align-items: center
     // justify-self: center
+    // position: relative
 
 .project-head
     display: inline
@@ -206,17 +211,82 @@ body
     color: $uni-font-color
     margin-right: auto
     margin-left: auto
+    // align-self: right
 
 .project-body
     max-width: $body-wid
+    align-self: center
     // display: block
     margin: 0px
+    position: relative
+    // border-left: solid 3px $theme 
+
+.project-body::after
+    content: ''
+    height: 17px
+    width: 17px
+    position: absolute
+    bottom: -20px
+    right: 0%
+    border-radius: 50%
+    background-color: $theme
+
+.project
+    width: 85%
+    padding: 10px 20px
+    // margin: 5px 20px
 
 .project-title
     color: $theme
 
 .project-desc
     color: $uni-font-color
+
+.project1, .project3
+    float: left
+    // padding-left: -15px
+    position: relative
+
+.project1::before, .project2::after, .project3::before, .project3::after
+    content: ''
+    position: absolute
+    height: 100%
+    width: 60%
+    top: 0%
+
+.project1::before
+    left: 0%
+    border-left: solid 3px $theme 
+    border-bottom: solid 3px $theme 
+    border-radius: 0 0 0 15px
+    margin: 5px
+
+.project2
+    position: relative
+    float: right
+
+.project2::after
+    right: 0%
+    border-right: solid 3px $theme 
+    border-bottom: solid 3px $theme 
+    border-top: solid 3px $theme 
+    border-radius: 0 15px 15px 0
+    margin: 5px
+
+
+.project3::before
+    left: 0%
+    border-top: solid 3px $theme 
+    border-left: solid 3px $theme 
+    border-bottom: solid 3px $theme 
+    border-radius: 15px 0 0 15px
+    margin-top: 8px
+
+.project3::after
+    border-bottom: solid 3px $theme 
+    right: 0%
+    width: 60%
+    margin: 11px
 
 @keyframes show-contacts
     0%

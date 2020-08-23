@@ -1,5 +1,6 @@
 body {
-  margin: 0; }
+  margin: 0;
+  background-color: #000; }
 
 .head {
   background-color: black;
@@ -155,8 +156,10 @@ body {
 .project-div {
   background-color: #000;
   color: #4f63fc;
+  margin-top: 25px;
+  width: 100%;
   display: flex;
-  justify-content: center; }
+  flex-direction: column; }
 
 .project-head {
   display: inline;
@@ -168,13 +171,73 @@ body {
 
 .project-body {
   max-width: 700px;
-  margin: 0px; }
+  align-self: center;
+  margin: 0px;
+  position: relative; }
+
+.project-body::after {
+  content: "";
+  height: 17px;
+  width: 17px;
+  position: absolute;
+  bottom: -20px;
+  right: 0%;
+  border-radius: 50%;
+  background-color: #4f63fc; }
+
+.project {
+  width: 85%;
+  padding: 10px 20px; }
 
 .project-title {
   color: #4f63fc; }
 
 .project-desc {
   color: white; }
+
+.project1, .project3 {
+  float: left;
+  position: relative; }
+
+.project1::before, .project2::after, .project3::before, .project3::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 60%;
+  top: 0%; }
+
+.project1::before {
+  left: 0%;
+  border-left: solid 3px #4f63fc;
+  border-bottom: solid 3px #4f63fc;
+  border-radius: 0 0 0 15px;
+  margin: 5px; }
+
+.project2 {
+  position: relative;
+  float: right; }
+
+.project2::after {
+  right: 0%;
+  border-right: solid 3px #4f63fc;
+  border-bottom: solid 3px #4f63fc;
+  border-top: solid 3px #4f63fc;
+  border-radius: 0 15px 15px 0;
+  margin: 5px; }
+
+.project3::before {
+  left: 0%;
+  border-top: solid 3px #4f63fc;
+  border-left: solid 3px #4f63fc;
+  border-bottom: solid 3px #4f63fc;
+  border-radius: 15px 0 0 15px;
+  margin-top: 8px; }
+
+.project3::after {
+  border-bottom: solid 3px #4f63fc;
+  right: 0%;
+  width: 60%;
+  margin: 11px; }
 
 @keyframes show-contacts {
   0% {
