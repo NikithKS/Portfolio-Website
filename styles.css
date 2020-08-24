@@ -77,6 +77,7 @@ body {
       text-decoration: none; }
   .head #head-img {
     max-width: 50%;
+    max-height: 80%;
     height: auto;
     position: absolute;
     bottom: -4%;
@@ -176,6 +177,26 @@ body {
       color: #EDF060; }
     .project-div .project .project-desc {
       color: #F8F1FF; }
+      .project-div .project .project-desc p {
+        font-size: medium;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: large; }
+      .project-div .project .project-desc .project-desc-subhead {
+        color: #EDF060;
+        font-size: large; }
+      .project-div .project .project-desc .view-code {
+        display: inline-block;
+        border: solid 3px #EDF060;
+        border-radius: 7px;
+        padding: 3px 7px;
+        float: right;
+        position: relative; }
+        .project-div .project .project-desc .view-code a {
+          color: #F8F1FF;
+          font-size: large;
+          text-decoration: none; }
+        .project-div .project .project-desc .view-code:hover {
+          border-color: #17BEBB; }
   .project-div .project1, .project-div .project3 {
     float: left;
     position: relative;
@@ -223,7 +244,54 @@ body {
     background-color: #17BEBB; }
 
 .competancy {
-  width: 95%; }
+  margin-top: 50px;
+  width: 95%;
+  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto; }
+  .competancy .comp-titl {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 33px;
+    letter-spacing: 2px;
+    padding: 5px 10px;
+    border: 3px solid #17BEBB;
+    color: #F8F1FF; }
+  .competancy .row {
+    width: 100%;
+    max-width: 700px; }
+    .competancy .row .languages, .competancy .row .tools {
+      display: inline-block;
+      width: 45%;
+      padding: 0px 2%;
+      margin-bottom: 25px;
+      margin-top: 0; }
+      .competancy .row .languages h3, .competancy .row .tools h3 {
+        padding: 5px;
+        color: #EDF060;
+        border-bottom: 3px solid #17BEBB; }
+      .competancy .row .languages .tool-list, .competancy .row .languages .lang-list, .competancy .row .tools .tool-list, .competancy .row .tools .lang-list {
+        list-style-type: none;
+        color: white;
+        font-size: medium; }
+
+.footer {
+  background: #000; }
+  .footer .foot-content {
+    height: 60px;
+    max-width: 700px;
+    margin: 0px auto;
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-around;
+    align-items: center; }
+    .footer .foot-content a {
+      color: grey;
+      text-decoration: none; }
+      .footer .foot-content a:hover {
+        color: #17BEBB; }
 
 @keyframes show-contacts {
   0% {
@@ -292,6 +360,11 @@ body {
     top: 20px;
     left: 10px; } }
 @media (max-width: 500px) {
+  .head .head-text .name .letter2 {
+    padding-left: 20px; }
+  .head .head-text .name .letter3 {
+    padding-left: 40px; }
+
   .about-box .about-border {
     margin-left: 30px; }
     .about-box .about-border .about-titl {
@@ -301,6 +374,11 @@ body {
       width: 90%;
       margin: 74px 15px 35px;
       font-size: larger;
-      letter-spacing: 0px; } }
+      letter-spacing: 0px; }
+
+  .competancy .row .languages, .competancy .row .tools {
+    width: 100%; }
+    .competancy .row .languages h3, .competancy .row .tools h3 {
+      border-width: 2px; } }
 
 /*# sourceMappingURL=styles.css.map */

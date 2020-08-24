@@ -8,8 +8,8 @@ $theme:#EDF060
 
 // $project-border: $theme
 $project-border: #17BEBB
-// $project-title-font: #17BEBB
-$project-title-font: $theme
+// $theme: #17BEBB
+$theme: $theme
 
 $contact-count: 2
 $body-wid: 700px
@@ -104,6 +104,7 @@ body
 
     #head-img
         max-width: 50%
+        max-height: 80%
         height: auto
         position: absolute
         bottom: -4%
@@ -217,7 +218,6 @@ body
         .project-head
             font-family: $uni-font
             font-size: 33px
-            // letter-spacing: 3px
             letter-spacing: 2px
             display: inline
             padding: 5px 10px
@@ -230,10 +230,37 @@ body
         padding: 10px
 
         .project-title
-            color: $project-title-font
+            color: $theme
 
         .project-desc
             color: $uni-font-color
+            p
+                font-size: medium
+                font-family: $uni-font
+                font-size: large
+
+            .project-desc-subhead
+                color: $theme
+                font-size: large
+
+
+            .view-code
+                display: inline-block
+                border: solid 3px $theme
+                // border-color: $project-border
+                border-radius: 7px
+                padding: 3px 7px
+                float: right
+                position: relative
+
+                a
+                    color: $uni-font-color
+                    font-size: large
+                    text-decoration: none
+
+
+                &:hover
+                    border-color: $project-border
 
     .project1, .project3
         float: left
@@ -292,8 +319,68 @@ body
         background-color: $project-border
 
 .competancy
+    margin-top: 50px
     width: 95%
-    
+    max-width: 700px
+    display: flex
+    flex-direction: column
+    align-items: center
+    // align-self: center
+    // display: inline-block
+    margin-left: auto
+    margin-right: auto
+
+    .comp-titl
+        font-family: $uni-font
+        font-size: 33px
+        letter-spacing: 2px
+        padding: 5px 10px
+        border: 3px solid $project-border
+        color: $uni-font-color
+
+    .row
+        width: 100%
+        max-width: 700px
+        // display: flex
+        // flex-flow: row wrap
+        // justify-content: space-around
+
+        .languages, .tools
+            display: inline-block
+            width: 45%
+            padding: 0px 2%
+            margin-bottom: 25px
+            margin-top: 0
+            // justify-self: center
+            h3
+                padding: 5px 
+                color: $theme
+                border-bottom: 3px solid $project-border
+
+            .tool-list, .lang-list
+                list-style-type: none
+                color: white
+                font-size: medium
+
+.footer
+    background: #000
+
+    .foot-content
+        height: 60px
+        max-width: 700px
+        margin: 0px auto
+        display: flex
+        flex-flow: wrap
+        justify-content: space-around
+        align-items: center
+
+        a
+            color: grey
+            text-decoration: none
+
+            &:hover
+                color: $project-border
+
 
 @keyframes show-contacts
     0%
@@ -385,6 +472,15 @@ body
             left: 10px
 
 @media (max-width: 500px)
+    .head
+        .head-text
+            .name
+                .letter2
+                    padding-left: 20px
+                .letter3
+                    padding-left: 40px
+
+
     .about-box
         .about-border
             margin-left: 30px
@@ -400,3 +496,11 @@ body
                 font-size: larger
                 // padding-top: 69px
                 letter-spacing: 0px
+    .competancy
+        .row
+            .languages, .tools
+                width: 100%
+                h3
+                    // display: inline
+                    border-width: 2px
+                    // text-decoration: underline 3px $project-border
