@@ -68,7 +68,7 @@ body {
       user-select: none;
       z-index: 100; }
       .head .contact-list .contact-items li:hover, .head .contact-list .contact-button:hover {
-        border-color: #0b807e; }
+        border-color: #17BEBB; }
     .head .contact-list .contact-items li {
       border-top-color: transparent;
       display: none; }
@@ -151,8 +151,8 @@ body {
 
 .project-div {
   background-color: #03071e;
-  margin: 25px 5px;
-  width: 100%;
+  margin: 25px auto;
+  width: 95%;
   display: flex;
   justify-content: center; }
   .project-div .project-body {
@@ -222,6 +222,9 @@ body {
     border-radius: 50%;
     background-color: #17BEBB; }
 
+.competancy {
+  width: 95%; }
+
 @keyframes show-contacts {
   0% {
     opacity: 0;
@@ -266,8 +269,13 @@ body {
       max-width: 70%; }
     .head .name {
       max-width: 100%; }
+    .head .contact-list .contact-items li, .head .contact-list .contact-button {
+      border-color: #17BEBB; }
+      .head .contact-list .contact-items li:hover, .head .contact-list .contact-button:hover {
+        border-color: #EDF060; }
 
   .floor {
+    background-color: #17BEBB;
     height: 3px; }
 
   .about-box .about-border {
