@@ -13,7 +13,7 @@ function ready(){
         entries.forEach(entry => {
             if(entry.isIntersecting){
                 about.classList.add('visible');
-                console.log("HERE");
+                // console.log("HERE");
             }
         });
     }
