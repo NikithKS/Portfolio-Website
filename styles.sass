@@ -5,7 +5,6 @@ $uni-font-color: #F8F1FF
 $uni-font: Arial, Helvetica, sans-serif
 // $theme:#E0CA3C
 $theme:#EDF060
-
 // $project-border: $theme
 $project-border: #17BEBB
 // $theme: #17BEBB
@@ -117,7 +116,7 @@ body
     background-color: grey
 
 
-.about-box
+#about-box
     width: 100%
     color: $uni-font-color
     background-color: $uni-bg
@@ -180,26 +179,21 @@ body
         &::after
             bottom: -3px
             right: -3px
-
-    &:hover, &:active
-        .about-border::before
-            border-top-color: $project-border
-            border-left-color: $project-border
-            animation: grow-border 0.7s linear forwards
-
-        .about-border::after
-            border-bottom-color: $project-border
-            border-right-color: $project-border
-            animation: grow-border 0.7s linear forwards
-
-        .about-titl
-            animation: move-titl-left 0.5s linear forwards
-
-            &::after
-                content: ":"
-
-        .about-content
-            animation: fade-in 0.8s linear forwards 
+#about-box.visible
+    .about-border::before
+        border-top-color: $project-border
+        border-left-color: $project-border
+        animation: grow-border 0.7s linear forwards
+    .about-border::after
+        border-bottom-color: $project-border
+        border-right-color: $project-border
+        animation: grow-border 0.7s linear forwards
+    .about-titl
+        animation: move-titl-left 0.5s linear forwards
+        &::after
+            content: ":"
+    .about-content
+        animation: fade-in 0.8s linear forwards 
 
 .project-div
     background-color: $uni-bg
@@ -245,7 +239,7 @@ body
 
 
             .view-code
-                display: inline-block
+                // display: inline-block
                 border: solid 3px $theme
                 // border-color: $project-border
                 border-radius: 7px
@@ -452,7 +446,7 @@ body
         background-color: $project-border
         height: 3px
 
-    .about-box
+    #about-box
         .about-border
             margin: 38px
             .about-titl
@@ -481,7 +475,7 @@ body
                     padding-left: 40px
 
 
-    .about-box
+    #about-box
         .about-border
             margin-left: 30px
             

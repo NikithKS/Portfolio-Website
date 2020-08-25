@@ -88,17 +88,17 @@ body {
   width: 100%;
   background-color: grey; }
 
-.about-box {
+#about-box {
   width: 100%;
   color: #F8F1FF;
   background-color: #03071e;
   display: flex;
   justify-content: center; }
-  .about-box .about-border {
+  #about-box .about-border {
     max-width: 700px;
     margin: 10px 10px 10px 40px;
     position: relative; }
-    .about-box .about-border .about-titl, .about-box .about-border about-titl::after {
+    #about-box .about-border .about-titl, #about-box .about-border about-titl::after {
       background-color: #03071e;
       font-family: Arial, Helvetica, sans-serif;
       font-size: 33px;
@@ -109,7 +109,7 @@ body {
       border: solid 3px #17BEBB;
       border-width: 0px;
       padding: 3px; }
-    .about-box .about-border .about-content {
+    #about-box .about-border .about-content {
       font-size: 22px;
       font-family: Arial, Helvetica, sans-serif;
       width: 65%;
@@ -123,32 +123,33 @@ body {
       -moz-user-select: none;
       -ms-user-select: none;
       user-select: none; }
-    .about-box .about-border::after, .about-box .about-border::before {
+    #about-box .about-border::after, #about-box .about-border::before {
       border: 3px solid transparent;
       content: "";
       height: 0px;
       width: 0px;
       position: absolute; }
-    .about-box .about-border::before {
+    #about-box .about-border::before {
       top: -3px;
       left: -3px; }
-    .about-box .about-border::after {
+    #about-box .about-border::after {
       bottom: -3px;
       right: -3px; }
-  .about-box:hover .about-border::before, .about-box:active .about-border::before {
-    border-top-color: #17BEBB;
-    border-left-color: #17BEBB;
-    animation: grow-border 0.7s linear forwards; }
-  .about-box:hover .about-border::after, .about-box:active .about-border::after {
-    border-bottom-color: #17BEBB;
-    border-right-color: #17BEBB;
-    animation: grow-border 0.7s linear forwards; }
-  .about-box:hover .about-titl, .about-box:active .about-titl {
-    animation: move-titl-left 0.5s linear forwards; }
-    .about-box:hover .about-titl::after, .about-box:active .about-titl::after {
-      content: ":"; }
-  .about-box:hover .about-content, .about-box:active .about-content {
-    animation: fade-in 0.8s linear forwards; }
+
+#about-box.visible .about-border::before {
+  border-top-color: #17BEBB;
+  border-left-color: #17BEBB;
+  animation: grow-border 0.7s linear forwards; }
+#about-box.visible .about-border::after {
+  border-bottom-color: #17BEBB;
+  border-right-color: #17BEBB;
+  animation: grow-border 0.7s linear forwards; }
+#about-box.visible .about-titl {
+  animation: move-titl-left 0.5s linear forwards; }
+  #about-box.visible .about-titl::after {
+    content: ":"; }
+#about-box.visible .about-content {
+  animation: fade-in 0.8s linear forwards; }
 
 .project-div {
   background-color: #03071e;
@@ -185,7 +186,6 @@ body {
         color: #EDF060;
         font-size: large; }
       .project-div .project .project-desc .view-code {
-        display: inline-block;
         border: solid 3px #EDF060;
         border-radius: 7px;
         padding: 3px 7px;
@@ -346,12 +346,12 @@ body {
     background-color: #17BEBB;
     height: 3px; }
 
-  .about-box .about-border {
+  #about-box .about-border {
     margin: 38px; }
-    .about-box .about-border .about-titl {
+    #about-box .about-border .about-titl {
       font-size: 25px;
       letter-spacing: 1px; }
-    .about-box .about-border .about-content {
+    #about-box .about-border .about-content {
       letter-spacing: 1px; } }
 @media (min-width: 501px) and (max-width: 760px) {
   .about-border .about-content {
@@ -365,12 +365,12 @@ body {
   .head .head-text .name .letter3 {
     padding-left: 40px; }
 
-  .about-box .about-border {
+  #about-box .about-border {
     margin-left: 30px; }
-    .about-box .about-border .about-titl {
+    #about-box .about-border .about-titl {
       top: 20px;
       left: 10px; }
-    .about-box .about-border .about-content {
+    #about-box .about-border .about-content {
       width: 90%;
       margin: 74px 15px 35px;
       font-size: larger;
