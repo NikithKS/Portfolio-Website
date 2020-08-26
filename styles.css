@@ -173,7 +173,7 @@ body {
       margin-right: auto;
       margin-left: auto; }
   .project-div .project {
-    padding: 10px; }
+    padding: 10px 25px; }
     .project-div .project .project-title {
       color: #EDF060; }
     .project-div .project .project-desc {
@@ -375,6 +375,9 @@ body {
       margin: 74px 15px 35px;
       font-size: larger;
       letter-spacing: 0px; }
+
+  .project-div .project {
+    padding: 10px 15px; }
 
   .competancy .row .languages, .competancy .row .tools {
     width: 100%; }
