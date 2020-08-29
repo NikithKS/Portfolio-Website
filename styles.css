@@ -40,7 +40,7 @@ body {
     .head .contact-list:hover .contact-items li:nth-child(1) {
       display: flex;
       opacity: 0;
-      z-index: 2;
+      z-index: 3;
       animation-name: show-contacts;
       animation-timing-function: linear;
       animation-fill-mode: forwards;
@@ -49,12 +49,21 @@ body {
     .head .contact-list:hover .contact-items li:nth-child(2) {
       display: flex;
       opacity: 0;
-      z-index: 1;
+      z-index: 2;
       animation-name: show-contacts;
       animation-timing-function: linear;
       animation-fill-mode: forwards;
       animation-duration: 0.3s;
       animation-delay: 0.3s; }
+    .head .contact-list:hover .contact-items li:nth-child(3) {
+      display: flex;
+      opacity: 0;
+      z-index: 1;
+      animation-name: show-contacts;
+      animation-timing-function: linear;
+      animation-fill-mode: forwards;
+      animation-duration: 0.3s;
+      animation-delay: 0.6s; }
     .head .contact-list .contact-items li, .head .contact-list .contact-button {
       padding: 5px 30px;
       display: flex;
@@ -75,6 +84,10 @@ body {
     .head .contact-list .contact-items li a {
       color: white;
       text-decoration: none; }
+    .head .contact-list .contact-items .pNumber {
+      background-color: #03071e;
+      color: #fff;
+      display: none; }
   .head #head-img {
     max-width: 50%;
     max-height: 80%;
@@ -292,6 +305,8 @@ body {
       text-decoration: none; }
       .footer .foot-content a:hover {
         color: #17BEBB; }
+    .footer .foot-content div {
+      color: grey; }
 
 @keyframes show-contacts {
   0% {
@@ -382,6 +397,9 @@ body {
   .competancy .row .languages, .competancy .row .tools {
     width: 100%; }
     .competancy .row .languages h3, .competancy .row .tools h3 {
-      border-width: 2px; } }
+      border-width: 2px; }
+
+  .footer div {
+    display: none; } }
 
 /*# sourceMappingURL=styles.css.map */

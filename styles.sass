@@ -10,7 +10,7 @@ $project-border: #17BEBB
 // $theme: #17BEBB
 $theme: $theme
 
-$contact-count: 2
+$contact-count: 3
 $body-wid: 700px
 
 body
@@ -78,28 +78,36 @@ body
             padding: 5px 30px 
             display: flex
             justify-content: center
-            // border: solid 3px $project-border
             border: solid 3px $theme
             color: white
             background-color: $uni-bg
-            // border: solid 3px #040c44
             -webkit-user-select: none     
             -moz-user-select: none
             -ms-user-select: none
             user-select: none
             z-index: 100
             &:hover
-                // border-color: $theme
                 border-color: $project-border
+        
 
         .contact-items li
             border-top-color: transparent
             display: none
 
+        // .contact-items .phone:hover + .pNumber, .contact-items .pNumber:hover
+        //     display: inline-block
+                // background-color: red
 
         .contact-items li a
             color: white
             text-decoration: none
+        
+        .contact-items .pNumber
+            background-color: $uni-bg
+            color: #fff
+            display: none
+
+
 
     #head-img
         max-width: 50%
@@ -374,6 +382,9 @@ body
 
             &:hover
                 color: $project-border
+        
+        div
+            color: grey
 
 
 @keyframes show-contacts
@@ -504,3 +515,7 @@ body
                     // display: inline
                     border-width: 2px
                     // text-decoration: underline 3px $project-border
+
+    .footer
+        div
+            display: none
