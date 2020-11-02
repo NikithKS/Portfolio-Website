@@ -186,7 +186,9 @@ body {
       margin-right: auto;
       margin-left: auto; }
   .project-div .project {
-    padding: 10px 25px; }
+    padding: 10px 25px;
+    position: inherit;
+    z-index: 10; }
     .project-div .project .project-title {
       color: #EDF060; }
     .project-div .project .project-desc {
